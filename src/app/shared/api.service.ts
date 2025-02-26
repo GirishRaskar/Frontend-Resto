@@ -35,12 +35,14 @@ export class ApiService
   }
 
   //delete request
-  deleteRestaurant(id:number) 
-  {
-    return this._http.delete<any>("https://backend-resto.onrender.com/"+id).pipe(map((res:any)=>{
-      return res;
-    }));
-  }
+  deleteRestaurant(id: number) {
+    return this._http.delete<any>(`https://backend-resto.onrender.com/deleteData/${id}`).pipe(
+        map((res: any) => {
+            return res;
+        })
+    );
+}
+
   
 
 

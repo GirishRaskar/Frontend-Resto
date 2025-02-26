@@ -53,7 +53,7 @@ export class ApiService
   // }
 
   updateRestaurant(id: number, data: any) {
-    return this._http.put<any>(`https://backend-resto.onrender.com/${id.toString()}`, data).pipe(
+    return this._http.put<any>(`https://backend-resto.onrender.com/updateData/${id}`, data).pipe(
         map((res: any) => {
             return res;
         })

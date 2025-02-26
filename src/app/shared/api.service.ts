@@ -21,7 +21,7 @@ export class ApiService
   //POST request
   postRestaurent(data:any ) 
   {
-    return this._http.post<any>("http://localhost:5200/postData", data).pipe(map((res:any)=>{
+    return this._http.post<any>("https://backend-resto.onrender.com/postData", data).pipe(map((res:any)=>{
       return res;
     }))
   }
@@ -29,7 +29,7 @@ export class ApiService
   //GET request
   getRestaurent() 
   {
-    return this._http.get<any>("http://localhost:5200/getData").pipe(map((res:any)=>{
+    return this._http.get<any>("https://backend-resto.onrender.com/getData").pipe(map((res:any)=>{
       return res;
     }));
   }
@@ -37,7 +37,7 @@ export class ApiService
   //delete request
   deleteRestaurant(id:number) 
   {
-    return this._http.delete<any>("http://localhost:5200/deleteData/"+id).pipe(map((res:any)=>{
+    return this._http.delete<any>("https://backend-resto.onrender.com/deleteData/"+id).pipe(map((res:any)=>{
       return res;
     }));
   }
@@ -53,7 +53,7 @@ export class ApiService
   // }
 
   updateRestaurant(id: number, data: any) {
-    return this._http.put<any>(`http://localhost:5200/updateData/${id.toString()}`, data).pipe(
+    return this._http.put<any>(`https://backend-resto.onrender.com/updateData/${id.toString()}`, data).pipe(
         map((res: any) => {
             return res;
         })

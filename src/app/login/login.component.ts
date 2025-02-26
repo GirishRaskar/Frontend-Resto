@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit
 
   logIn() {
     if (this.loginForm.valid) {
-      this.http.post('http://localhost:5200/login', this.loginForm.value).subscribe(
+      this.http.post('https://backend-resto.onrender.com/login', this.loginForm.value).subscribe(
         (response: any) => {
           alert(`${response.name} logged in successfully`);
           this._router.navigate(['/restaurent']);

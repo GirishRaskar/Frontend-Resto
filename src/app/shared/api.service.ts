@@ -41,14 +41,26 @@ export class ApiService
       return res;
     }));
   }
+  
+
 
   //update request
-  updateRestaurant(id: number, data: any) 
-  {
-    return this._http.put<any>("http://localhost:5200/updateData/"+id,data).pipe(map((res:any)=>{
-      return res;
-    }));
-  }
+  // updateRestaurant(id: number, data: any) 
+  // {
+  //   return this._http.put<any>("http://localhost:5200/updateData/"+id,data).pipe(map((res:any)=>{
+  //     return res;
+  //   }));
+  // }
+
+  updateRestaurant(id: number, data: any) {
+    return this._http.put<any>(`http://localhost:5200/updateData/${id.toString()}`, data).pipe(
+        map((res: any) => {
+            return res;
+        })
+    );
+}
+
+
 
   // signUpUser(data:any) 
   // {
